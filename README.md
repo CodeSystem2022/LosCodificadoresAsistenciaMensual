@@ -1,4 +1,4 @@
-# Los codificadores 🤘
+# Los codificadores 💻
 
 Grupo de la Tecnicatura Universitaria en Programación de la Universidad Tecnológica Nacional.
 
