@@ -1,0 +1,58 @@
+/*
+Matriz transpuesta ... usando JOptionPane
+*/
+package matriz.transpuesta;
+
+import javax.swing.JOptionPane;
+
+
+public class MatrizTranspuesta {
+
+   
+    public static void main(String[] args) {
+
+        
+        //Pedimos las dimensiones de la Matriz
+       int nF = Integer.parseInt(JOptionPane.showInputDialog(".:MATRIZ TRANSPUESTA:.\n\n"
+       +"Ingrese el número de FILAS de la Matriz"));//Filas
+       int nC = Integer.parseInt(JOptionPane.showInputDialog(".:MATRIZ TRANSPUESTA:.\n\n"
+       +"Ingrese el número de COLUMNAS de la Matriz"));//Columnas
+       
+        int[][] matriz = new int [nF][nC]; //Definimos e instanciamos la matriz
+        int[][] matrizT = new int [nC][nF]; //Definimos e instanciamos la matriz
+        
+       //Pedimos los datos de la Matriz
+       for (int i = 0; i<nF; i++){
+           for (int j = 0; j<nC; j++){
+               matriz [i][j] = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el valor para la posición ["+(i+1)+","+(j+1)+"] de la Matriz"));
+           }
+       }
+       //Mostramos la Matriz original
+       String resultados = "";
+       for (int i = 0; i<nF; i++){
+           for (int j = 0; j<nC; j++){
+               resultados += matriz [i][j];
+               resultados += "   ";
+           }
+           resultados += "\n";
+       }
+       JOptionPane.showMessageDialog(null,"MATRIZ ORIGINAL\n\n"+resultados);
+       
+       //Transponemos la Matriz
+       String resultado = "";
+      
+           for (int j = 0; j<nC; j++){
+               for (int i = 0; i<nF; i++){
+               matrizT [j][i]= matriz [i][j];
+               resultado += matrizT[j][i];
+               resultado += "    ";
+                }
+           resultado += "\n";
+           
+      }
+      JOptionPane.showMessageDialog(null,"MATRIZ TRANSPUESTA\n\n"+resultado);        
+    }
+}
+    
+       
+       
